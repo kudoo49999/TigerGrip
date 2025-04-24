@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiger Grip</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+</head>
+<body class="bg-white text-gray-900">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-white py-4 px-6 flex justify-between items-center">
+    <div class="flex items-center gap-3">
+      <img src="logo.jpg" alt="Tiger Grip Logo" class="h-10 w-10 rounded-full object-cover border-2 border-white" />
+      <h1 class="text-2xl font-bold">Tiger Grip</h1>
+    </div>
+    <nav>
+      <ul class="flex space-x-4">
+        <li><a href="#" class="hover:text-blue-400">Home</a></li>
+        <li><a href="#" class="hover:text-blue-400">Workouts</a></li>
+        <li><a href="#" class="hover:text-blue-400">Diet</a></li>
+        <li><a href="#" class="hover:text-blue-400">Health</a></li>
+        <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container mx-auto py-12 px-4">
+
+    <!-- Hero Section -->
+    <section class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold mb-4">Unlock Your Potential</h2>
+      <p class="text-lg text-gray-600">Start your journey to a healthier lifestyle with <span class="italic text-blue-500">Tiger Grip</span></p>
+    </section>
+
+    <!-- Gym Workouts Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Gym Workouts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Cardio Blast with Workout Modal -->
+        <div onclick="openWorkoutModal()" class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Cardio+Blast" class="w-full h-48 object-cover rounded-t-lg" alt="Cardio Blast" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Cardio Blast</h3>
+            <p class="text-sm text-gray-500">30 mins | Beginner</p>
+          </div>
+        </div>
+
+        <!-- Strength Training with Workout Modal -->
+        <div onclick="openStrengthTrainingModal()" class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Strength+Training" class="w-full h-48 object-cover rounded-t-lg" alt="Strength Training" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Strength Training</h3>
+            <p class="text-sm text-gray-500">45 mins | Intermediate</p>
+          </div>
+        </div>
+
+        <!-- Yoga Flow with Workout Modal -->
+        <div onclick="openYogaFlowModal()" class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Yoga+Flow" class="w-full h-48 object-cover rounded-t-lg" alt="Yoga Flow" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Yoga Flow</h3>
+            <p class="text-sm text-gray-500">60 mins | Advanced</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <!-- Diet Control Section -->
+    <section class="mb-12">
+      <h2 class="text-2xl font-bold mb-6">Diet Control</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Keto Diet Plan Card with Trigger -->
+        <div onclick="openKetoModal()" class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Keto+Diet" class="w-full h-48 object-cover rounded-t-lg" alt="Keto Diet" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Keto Diet Plan</h3>
+            <p class="text-sm text-gray-500">Low Carb | High Fat</p>
+          </div>
+        </div>
+        <!-- Other Diet Cards -->
+        <div class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Vegetarian+Prep" class="w-full h-48 object-cover rounded-t-lg" alt="Vegetarian Meal Prep" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Vegetarian Meal Prep</h3>
+            <p class="text-sm text-gray-500">Plant-based | Balanced</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Fasting" class="w-full h-48 object-cover rounded-t-lg" alt="Intermittent Fasting" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Intermittent Fasting</h3>
+            <p class="text-sm text-gray-500">Time-restricted Eating</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Health Balance Section -->
+    <section>
+      <h2 class="text-2xl font-bold mb-6">Health Balance</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Mindfulness" class="w-full h-48 object-cover rounded-t-lg" alt="Mindfulness Meditation" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Mindfulness Meditation</h3>
+            <p class="text-sm text-gray-500">Stress Relief | Focus</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Sleep+Tips" class="w-full h-48 object-cover rounded-t-lg" alt="Sleep Hygiene" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Sleep Hygiene Tips</h3>
+            <p class="text-sm text-gray-500">Better Sleep | Rest</p>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow hover:shadow-xl cursor-pointer transition">
+          <img src="https://placehold.co/300x200?text=Hydration" class="w-full h-48 object-cover rounded-t-lg" alt="Hydration" />
+          <div class="p-4">
+            <h3 class="text-xl font-semibold">Hydration Importance</h3>
+            <p class="text-sm text-gray-500">Water Intake | Health</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 🏋️ Modal: Cardio Blast Workout Details -->
+  <div id="workoutModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-lg">
+      <button onclick="closeWorkoutModal()" class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red-600">&times;</button>
+      <h2 class="text-2xl font-bold mb-4">Cardio Blast Workout</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Jump Squat – 2 Sets / 30 Reps</li>
+        <li>Burpees / Squat Thrust – 2 Sets / 30 Reps</li>
+        <li>Cross Body Mountain Climbers – 2 Sets / 30 Reps</li>
+        <li>Jumping Rope – 2 Sets / 30 Reps</li>
+        <li>Long Jump – 2 Sets / 30 Reps</li>
+        <li>Star Jumps – 2 Sets / 30 Reps</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 🏋️ Modal: Strength Training Workout Details -->
+  <div id="strengthTrainingModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-lg">
+      <button onclick="closeStrengthTrainingModal()" class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red-600">&times;</button>
+      <h2 class="text-2xl font-bold mb-4">Strength Training Workout</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Squats – 3 Sets / 8-10 Reps</li>
+        <li>Romanian Deadlift – 3 Sets / 8 Reps</li>
+        <li>Push Ups – 4 Sets / 6 Reps</li>
+        <li>Bench Press – 4 Sets / 10 Reps</li>
+        <li>Crunches – 3 Sets / 30 Reps</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 🧘 Modal: Yoga Flow Workout Details -->
+  <div id="yogaFlowModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-lg max-w-md w-full p-6 relative shadow-lg">
+      <button onclick="closeYogaFlowModal()" class="absolute top-3 right-3 text-2xl text-gray-600 hover:text-red-600">&times;</button>
+      <h2 class="text-2xl font-bold mb-4">Yoga Flow Workout</h2>
+      <ul class="list-disc pl-6 text-gray-700 space-y-2">
+        <li>Hero Pose with Hands Clapped</li>
+        <li>Hero Pose with Eagle Arms</li>
+        <li>Downward Facing Dog Pose</li>
+        <li>Standing Forward Bend</li>
+        <li>Surya Namaskar</li>
+        <li>Warrior II</li>
+        <li>Triangle Pose</li>
+        <li>Warrior I</li>
+        <li>Standing With Legged Forward Bend</li>
+        <li>Handstand</li>
+        <li>Headstand</li>
+        <li>Bridge Pose</li>
+        <li>Upward Bow Pose</li>
+        <li>Shoulderstand</li>
+        <li>Seated Forward Bend</li>
+      </ul>
+    </div>
+  </div>
+
+          <!-- Keto Diet Modal -->
+  <div id="ketoModal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+    <div class="bg-white rounded-lg p-4 w-11/12 md:w-1/2 lg:w-1/3 relative">
+      <!-- Close Button (X) -->
+      <button onclick="closeKetoModal()" class="absolute top-2 right-2 text-gray-600 text-2xl font-bold hover:text-red-600">&times;</button>
+      
+      <h2 class="text-2xl font-semibold mb-4">Keto Diet Plan</h2>
+      <h3 class="text-xl font-semibold mb-2">Keto Food List</h3>
+      
+      <h4 class="text-lg font-semibold mb-2">Meat and Eggs</h4>
+      <ul class="list-disc pl-4 text-gray-600 mb-4 text-sm">
+        <li>Salmon</li>
+        <li>Albacore Tuna</li>
+        <li>Sardines</li>
+        <li>Beef</li>
+        <li>Eggs</li>
+        <li>Pork</li>
+        <li>Turkey</li>
+        <li>Chicken</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mb-2">Fruits and Vegetables</h4>
+      <ul class="list-disc pl-4 text-gray-600 mb-4 text-sm">
+        <li>Avocado</li>
+        <li>Berries</li>
+        <li>Bell Pepper</li>
+        <li>Broccoli</li>
+        <li>Cauliflower</li>
+        <li>Green Beans</li>
+        <li>Zucchini</li>
+        <li>Spinach</li>
+      </ul>
+
+      <h4 class="text-lg font-semibold mb-2">Dairy</h4>
+      <ul class="list-disc pl-4 text-gray-600 mb-4 text-sm">
+        <li>Cheese / Cottage Cheese</li>
+        <li>Yogurt</li>
+        <li>Butter</li>
+        <li>Heavy Cream / Sour Cream</li>
+      </ul>
+    </div>
+  </div>
+
+
+  <!-- JavaScript -->
+  <script>
+    // Open the Cardio Blast Modal
+    function openWorkoutModal() {
+      document.getElementById('workoutModal').classList.remove('hidden');
+    }
+
+    // Close the Cardio Blast Modal
+    function closeWorkoutModal() {
+      document.getElementById('workoutModal').classList.add('hidden');
+    }
+
+    // Open the Strength Training Modal
+    function openStrengthTrainingModal() {
+      document.getElementById('strengthTrainingModal').classList.remove('hidden');
+    }
+
+    // Close the Strength Training Modal
+    function closeStrengthTrainingModal() {
+      document.getElementById('strengthTrainingModal').classList.add('hidden');
+    }
+
+    // Open the Yoga Flow Modal
+    function openYogaFlowModal() {
+      document.getElementById('yogaFlowModal').classList.remove('hidden');
+    }
+
+    // Close the Yoga Flow Modal
+    function closeYogaFlowModal() {
+      document.getElementById('yogaFlowModal').classList.add('hidden');
+    }
+
+    // Function to open the Keto Diet Modal
+  function openKetoModal() {
+    document.getElementById('ketoModal').classList.remove('hidden');
+  }
+
+  // Function to close the Keto Diet Modal
+  function closeKetoModal() {
+    document.getElementById('ketoModal').classList.add('hidden');
+  }
+
+  </script>
+
+</body>
+</html>
